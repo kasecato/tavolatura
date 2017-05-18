@@ -1,0 +1,21 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET         /                         controllers.Application.index
+
+# Map static resources from the /public folder to the /assets URL path
+GET         /assets/*file             controllers.Assets.at(path="/public", file)
+
+# Search tab
+GET         /tab/search               controllers.tab.TabController.search
+GET         /api/v1/tab/search        controllers.tab.TabRestController.search(title: String ?= "")
+
+# Upload tab
+GET         /tab/upload               controllers.tab.TabController.upload
+POST        /api/v1/tab/upload        controllers.tab.TabRestController.upload
+
+# Edit tab
+GET         /tab/editor               controllers.tab.TabController.editor
+

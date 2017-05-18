@@ -1,0 +1,24 @@
+@(tabs: List[Tab])
+
+@main("Tab Searcher") {
+    <h1>List</h1>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Song</th>
+                    <th>Artist</th>
+                </tr>
+            </thead>
+            <tbody>
+            @tabs.map { tab =>
+                <tr>
+                    <td>@tab.song</td>
+                    <td>@tab.artist</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+}
+

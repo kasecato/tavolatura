@@ -1,0 +1,32 @@
+:root {
+    /* Solarized Dark */
+}
+
+body {
+    padding-top: 50px;
+    background-color: #002b36;
+    color: #fdf6e3;
+}
+
+h1 {
+    margin-bottom: 20px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid #073642;
+}
+
+.placeholders {
+    padding-bottom: 3rem;
+}
+
+.placeholder img {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.card {
+    background-color: #073642;
+}
+
+.list-group-item {
+    background-color: #073642;
+}

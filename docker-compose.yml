@@ -1,0 +1,13 @@
+version: '3'
+services:
+  db:
+    build: ./mysql
+    container_name: mysql-tavolatura
+    environment:
+      MYSQL_ROOT_PASSWORD: sa
+      MYSQL_HOST: ""
+    volumes:
+      - ./mysql/init.d:/docker-entrypoint-initdb.d
+      - ./mysql/conf.d:/etc/mysql/conf.d
+    ports:
+      - "13306:3306"

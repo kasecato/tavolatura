@@ -1,0 +1,19 @@
+@main("Tab Uploader") {
+    @helper.form(action = controllers.tab.routes.TabRestController.upload, 'enctype -> "multipart/form-data") {
+        <div class="form-group">
+            <label for="tabs" class="col-sm-3 control-label">Tab</label>
+            <div class="col-sm-9">
+                <input class="form-control" type="file" id="tabs" name="tabs">
+            </div>
+            <label for="song" class="col-sm-3 control-label">Song</label>
+            <div class="col-sm-9">
+                <input class="form-control" type="text" id="song" name="song">
+            </div>
+            <label for="artist" class="col-sm-3 control-label">Artist</label>
+            <div class="col-sm-9">
+                <input class="form-control" type="text" id="artist" name="artist">
+            </div>
+        </div>
+        <input type="submit" class="btn btn-primary">
+    }
+}

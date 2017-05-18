@@ -1,0 +1,17 @@
+{
+  "presets": [
+    ["es2015", { "modules": false }],
+    "stage-0",
+    "react"
+  ],
+  "plugins": ["react-hot-loader/babel", "lodash"],
+  "env": {
+    "production": {
+      "plugins": [
+        "transform-react-constant-elements",
+        "transform-react-inline-elements",
+        "transform-react-remove-prop-types"
+      ]
+    }
+  }
+}

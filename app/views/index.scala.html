@@ -1,0 +1,21 @@
+@(message: String, tabs: List[Tab])
+
+@main("Tavolatura") {
+    <div class="row">
+    @tabs.map { tab =>
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-12">
+            <div class="card">
+                <div class="card-block">
+                    <h4 class="card-title">@tab.artist</h4>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">@tab.song</li>
+                </ul>
+                <div class="card-block">
+                    <a href="tab/editor?id=@tab.id" class="btn btn-primary">Card link</a>
+                </div>
+            </div>
+        </div>
+    }
+    </div>
+}

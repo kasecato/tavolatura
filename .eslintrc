@@ -1,0 +1,36 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "quotes": [2, "single"],
+    "strict": [2, "never"],
+    "eqeqeq": 2,
+    "no-var": 2,
+    "semi": [2, "always"],
+    "no-unreachable": 2,
+    "no-unused-vars": [2, "argsIgnorePattern": "_"],
+    "array-bracket-spacing": 0,
+    "react/jsx-uses-react": 2,
+    "react/jsx-uses-vars": 2,
+    "react/jsx-no-bind": 2,
+    "react/react-in-jsx-scope": 2,
+    "flowtype/define-flow-type": 1
+  },
+  "plugins": [
+    "babel",
+    "react",
+    "flowtype"
+  ],
+  "extends": "eslint:recommended"
+}

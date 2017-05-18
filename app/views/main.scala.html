@@ -1,0 +1,50 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>@title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("./img/favicon.png")">
+            <!-- Bootstrap core CSS -->
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("./css/vendor/bootstrap.min.css")">
+            <!-- Custom styles -->
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("./css/main-min.css")">
+    </head>
+    <body>
+        <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+            <button class="navbar-toggler navbar-toggler-right hidden-lg-up" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="/">Tavolatura</a>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/tab/upload">Upload</a>
+                    </li>
+                </ul>
+                <form class="form-inline mt-2 mt-md-0" action="/tab/search">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <main class="col-sm-12 col-md-12 pt-3">
+                @content
+                </main>
+            </div>
+        </div>
+            <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="@routes.Assets.at("./js/vendor/jquery-slim.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("./js/vendor/tether.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("./js/vendor/bootstrap.min.js")"></script>
+        <script type="text/javascript" src="@routes.Assets.at("./js/vendor/ie10-viewport-bug-workaround.js")"></script>
+    </body>
+</html>
